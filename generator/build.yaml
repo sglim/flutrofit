@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      flutrofit_generator|flutrofit:
+        enabled: true
+
+builders:
+  flutrofit:
+    target: ":flutrofit_generator"
+    import: "package:flutrofit_generator/flutrofit_generator.dart"
+    builder_factories: ["restApiBuilder"]
+    build_extensions: { ".dart": [".flutrofit.g.part"] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]

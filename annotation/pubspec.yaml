@@ -1,0 +1,11 @@
+name: flutrofit
+description: Rest API for flutter like Retrofit
+repository: https://github.com/sglim/flutrofit
+version: 0.1.0
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
+
+dependencies:
+dev_dependencies:
+  test: 1.3.4
